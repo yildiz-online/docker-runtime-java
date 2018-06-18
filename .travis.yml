@@ -1,0 +1,13 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t moussavdb/jre:latest -t moussavdb/jre:build_$TRAVIS_BUILD_NUMBER .
+script:
+  - docker images moussavdb/jre
+  
+after_success:
+  - docker login -u="moussavdb" -p="$DOCKER_PASSWORD";
+    docker push moussavdb/jre:latest;
+    docker push moussavdb/jre:build_$TRAVIS_BUILD_NUMBER;
