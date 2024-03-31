@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk-alpine:21-jre
+FROM azul/zulu-openjdk-alpine:22-jre
 
 LABEL maintainer="Grégory Van den Borre vandenborre.gregory@hotmail.fr"
 
