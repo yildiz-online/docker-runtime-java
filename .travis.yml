@@ -16,4 +16,4 @@ before_install:
 script:
   - docker login -u="moussavdb" --password-stdin <<< "$DOCKER_PASSWORD";
   - docker buildx create --use
-  - docker buildx build --push --platform linux/arm64/v8,linux/amd64 --tag moussavdb/runtime-java:26 --tag moussavdb/runtime-java:sts .
+  - docker buildx build --push --platform linux/arm64/v8,linux/amd64 --tag moussavdb/runtime-java:27 --tag moussavdb/runtime-java:sts .
